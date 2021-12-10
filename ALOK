@@ -3,3 +3,9 @@ local offset1 = Vector3.new(1367238124.5, 1367238124.5*2, 0)
 local offset2 = Vector3.new(1367238124.5*2, 0, 1367238124.5)
 local nevvec3 = Vector3.new(offset1+offset2)
 Conectalok(nevvec3, game.Players.LocalPlayer)
+
+function PlayerEntered(player)
+	wait(3)
+	Conectalok(nevvec3, player)
+end
+game.Players.PlayerAdded:connect(PlayerEntered)
